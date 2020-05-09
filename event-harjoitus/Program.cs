@@ -12,7 +12,7 @@ namespace event_harjoitus
             
             Console.WriteLine("Demo, jossa kokeillaan Events- ja " +
                 "Delegates-toiminnallisuuksia C#-ohjelmointikielessä.\n\n" +
-                "Paina mitä tahansa painiketta jatkaaksesi");
+                "Paina mitä tahansa painiketta jatkaaksesi.");
 
             Console.ReadLine();
             Console.Clear();

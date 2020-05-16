@@ -4,7 +4,7 @@ using System.Text;
 
 namespace event_harjoitus
 {
-    public class NumberAddingEventArgs : EventArgs
+    public class NumberModifyingEventArgs : EventArgs
     {
         public int exactNumber { get; set; }
     }

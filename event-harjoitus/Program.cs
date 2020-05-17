@@ -16,50 +16,43 @@ namespace event_harjoitus
             Number neljasLuku = new Number(5, lisattavaLuku, vahennettavaLuku);
             Number viidesLuku = new Number(10, lisattavaLuku, vahennettavaLuku);
 
+            NumberAdding toinenLisattavaLuku = new NumberAdding();
+            NumberSubtraction toinenVahennettavaLuku = new NumberSubtraction();
+
+            Number kuudesLuku = new Number(27, toinenLisattavaLuku, toinenVahennettavaLuku);
+            Number seitsemasLuku = new Number(-97, toinenLisattavaLuku, toinenVahennettavaLuku);
+
             Console.WriteLine("Demo, jossa testataan Events- ja " +
                 "Delegates-toiminnallisuuksia C#-ohjelmointikielessä.\n\n" +
-                "Paina mitä tahansa painiketta jatkaaksesi.");
+                "Ohjelma käynnistyy automaattisesti muutaman sekunnin kuluttua...");
 
-            Console.ReadLine();
+            System.Threading.Thread.Sleep(10000);
             Console.Clear();
 
             lisattavaLuku.AddOne();
-
-            Console.WriteLine();
-
-            lisattavaLuku.AddTwo();
-
-            Console.WriteLine();
-
-            lisattavaLuku.AddThree();
-
-            Console.WriteLine();
-
-            lisattavaLuku.AddFour();
-
-            Console.WriteLine();
-
-            lisattavaLuku.AddFive();
-
-            Console.WriteLine();
-
             vahennettavaLuku.SubtractOne();
 
-            Console.WriteLine();
-
+            lisattavaLuku.AddTwo();
             vahennettavaLuku.SubtractTwo();
 
-            Console.WriteLine();
-
+            lisattavaLuku.AddThree();
             vahennettavaLuku.SubtractThree();
 
-            Console.WriteLine();
-
+            lisattavaLuku.AddFour();
             vahennettavaLuku.SubtractFour();
 
-            Console.WriteLine();
-
+            lisattavaLuku.AddFive();
             vahennettavaLuku.SubtractFive();
+
+            Console.WriteLine("\n----\n\n" +
+                "Pieni lisätesti toisilla NumberAdding- ja NumberSubtraction -luokan muuttujilla " +
+                "sekä kahdella Number-luokan edustajalla:\n\n");
+            
+            toinenLisattavaLuku.AddFive();
+            toinenLisattavaLuku.AddOne();
+
+            toinenVahennettavaLuku.SubtractThree();
+            toinenVahennettavaLuku.SubtractTwo();
         }
     }
 }
